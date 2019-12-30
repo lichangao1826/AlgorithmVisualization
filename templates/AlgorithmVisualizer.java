@@ -40,6 +40,7 @@ public class AlgorithmVisualizer {
 
   // TODO: 根据情况决定是否实现键盘鼠标等交互事件监听器类
   private class AlgorithmKeyListener extends KeyAdapter {}
+
   private class AlgorithmMouseListener extends MouseAdapter {}
 
   public static void main(String[] args) {

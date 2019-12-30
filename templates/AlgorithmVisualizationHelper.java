@@ -1,13 +1,12 @@
+import javax.swing.*;
 import java.awt.*;
-import java.awt.geom.Ellipse2D;
+import java.awt.geom.*;
 
 import java.lang.InterruptedException;
 
-
 public class AlgorithmVisualizationHelper {
 
-  private AlgorithmVisualizationHelper() {
-  }
+  private AlgorithmVisualizationHelper() {}
 
   public static final Color Red = new Color(0xF44336);
   public static final Color Pink = new Color(0xE91E63);
@@ -59,8 +58,7 @@ public class AlgorithmVisualizationHelper {
     g.setColor(color);
   }
 
-  public static void setStrokeWidth(Graphics2D g, int w) {
-    int strokeWidth = w;
+  public static void setStrokeWidth(Graphics2D g, int strokeWidth) {
     g.setStroke(new BasicStroke(strokeWidth, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
   }
 
@@ -82,8 +80,7 @@ public class AlgorithmVisualizationHelper {
 
   public static void drawText(Graphics2D g, String text, int centerx, int centery) {
 
-    if (text == null)
-      throw new IllegalArgumentException("Text is null in drawText function!");
+    if (text == null) throw new IllegalArgumentException("Text is null in drawText function!");
 
     FontMetrics metrics = g.getFontMetrics();
     int w = metrics.stringWidth(text);
